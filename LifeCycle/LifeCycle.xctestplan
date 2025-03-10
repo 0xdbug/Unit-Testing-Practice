@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "F5F7DC7F-3092-4646-9BCE-54680A734235",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:LifeCycle.xcodeproj",
+      "identifier" : "70AC9A4B2D7B8675001603B2",
+      "name" : "LifeCycle"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:LifeCycle.xcodeproj",
+        "identifier" : "70AC9A612D7B8678001603B2",
+        "name" : "LifeCycleTests"
+      }
+    }
+  ],
+  "version" : 1
+}

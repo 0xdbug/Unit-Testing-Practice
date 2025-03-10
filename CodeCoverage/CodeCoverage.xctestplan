@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "F3B6BC82-167A-4C3E-BE45-8BB2E009A4AA",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:CodeCoverage.xcodeproj",
+      "identifier" : "703D34772D7BF7D5002116B5",
+      "name" : "CodeCoverage"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:CodeCoverage.xcodeproj",
+        "identifier" : "703D348D2D7BF7D8002116B5",
+        "name" : "CodeCoverageTests"
+      }
+    }
+  ],
+  "version" : 1
+}

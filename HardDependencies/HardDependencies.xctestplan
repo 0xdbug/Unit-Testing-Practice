@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "BC541066-3369-4117-BB69-DF7EC4F1E6EA",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:HardDependencies.xcodeproj",
+      "identifier" : "70D9F7842D7E4598007DB12C",
+      "name" : "HardDependencies"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:HardDependencies.xcodeproj",
+        "identifier" : "70D9F79A2D7E459A007DB12C",
+        "name" : "HardDependenciesTests"
+      }
+    }
+  ],
+  "version" : 1
+}

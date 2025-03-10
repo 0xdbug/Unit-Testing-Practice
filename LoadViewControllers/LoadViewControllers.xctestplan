@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "E08AB512-90F3-4CE4-8443-95CFFE1F0C60",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:LoadViewControllers.xcodeproj",
+      "identifier" : "708799D22D7DCE6700BA1B5A",
+      "name" : "LoadViewControllers"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:LoadViewControllers.xcodeproj",
+        "identifier" : "708799E82D7DCE6A00BA1B5A",
+        "name" : "LoadViewControllersTests"
+      }
+    }
+  ],
+  "version" : 1
+}
