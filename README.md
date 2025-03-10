@@ -19,14 +19,22 @@ These are tests that capture the actual behavior of the code. To write a charact
 
 ### Unit Testing - Dependencies (FIRE)
 F - Fast
+
 I - Isolated (no persisting side effects beyond the test run)
+
 R- Repeatable (same result every time)
+
 E - Easy-to-use
+
 ### Unit Testing (FIRST)
 F - Fast
+
 I - Isolated
+
 R- Repeatable
+
 S - Self-verifying (no human interaction needed)
+
 T - Timely (before production code)
 
 
@@ -34,8 +42,10 @@ T - Timely (before production code)
 Dependencies make writing tests difficult there are a few different ways to work around them
 
 Its better to limit these two to legacy code only
+
 - Substituting (Singleton Backdoor)
 - Subclassing
+
 these two are good when the code is already written and works. we want minimal changes to production code.
 
 otherwise regular injection is fine ig
