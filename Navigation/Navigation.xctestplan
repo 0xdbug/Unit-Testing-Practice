@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "267438C4-94A6-4025-8A7D-F230CCD33ACE",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Navigation.xcodeproj",
+      "identifier" : "709B55602D80E62100F4DD3E",
+      "name" : "Navigation"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:Navigation.xcodeproj",
+        "identifier" : "709B55762D80E62400F4DD3E",
+        "name" : "NavigationTests"
+      }
+    }
+  ],
+  "version" : 1
+}
