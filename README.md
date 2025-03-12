@@ -49,6 +49,12 @@ Its better to limit these two to legacy code only
 these two are good when the code is already written and works. we want minimal changes to production code.
 
 otherwise regular injection is fine ig
+
+### Run Loops
+Some UIKit actions are not immediate, they add an event to the run loop.
+execute the run loop to fire events
+
+
 - Constructor Injection
 - Property Injection
 - Method Injection
