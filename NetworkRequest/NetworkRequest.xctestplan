@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "1C51FF95-36AC-40DD-85CA-EE8811B3DB17",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:NetworkRequest.xcodeproj",
+      "identifier" : "7092D52D2D8297AF00603049",
+      "name" : "NetworkRequest"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:NetworkRequest.xcodeproj",
+        "identifier" : "7092D5432D8297B200603049",
+        "name" : "NetworkRequestTests"
+      }
+    }
+  ],
+  "version" : 1
+}
