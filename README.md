@@ -55,6 +55,23 @@ Some UIKit actions are not immediate, they add an event to the run loop.
 execute the run loop to fire events
 
 
+## BDD - Quick & Nimble 
+> Verify how the application behaves regardless of implementation.
+
+Example - (AppTacToe Project)
+
+> 1. Playing a single move should switch to other player.
+> 2. Playing two moves should switch back to the first player.
+> 3. Playing a winning move should switch to a Won state.
+> 4. Playing a move leaving no remaining moves should switch to a Draw (Tie) state.
+
+describe: behavior to test?
+
+context: specific context/action?
+
+it: expected result
+
+
 - Constructor Injection
 - Property Injection
 - Method Injection
