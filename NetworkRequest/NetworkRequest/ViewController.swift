@@ -13,7 +13,26 @@ protocol URLSessionProtocol {
 
 extension URLSession: URLSessionProtocol {}
 
+struct Search: Decodable {
+    let results: [SearchResult]
+}
+
+struct SearchResult: Decodable, Equatable {
+    let artistName: String
+    let trackName: String
+    let averageUserRating: Float?
+    let genres: [String]
+}
+
 class ViewController: UIViewController {
+    // such a weird syntax
+    var handleResults: ([SearchResult]) -> Void = { print($0) }
+    
+    private(set) var results: [SearchResult] = [] {
+        didSet {
+            handleResults(results)
+        }
+    }
     
     @IBOutlet private(set) var button: UIButton!
     private var dataTask: URLSessionDataTask?
@@ -41,18 +60,51 @@ class ViewController: UIViewController {
             -> Void in
             guard let self = self else { return }
             
-            let decoded = String(data: data ?? Data(), encoding: .utf8)
-            print("response: \(String(describing: response))")
-            print("data: \(String(describing: decoded))")
-            print("error: \(String(describing: error))")
+            var decoded: Search?
+            var errorMessage: String?
             
-            DispatchQueue.main.async {
+            if let error = error {
+                errorMessage = error.localizedDescription
+            }else if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+                
+                errorMessage = "Response: " + HTTPURLResponse.localizedString(forStatusCode: response.statusCode)
+                
+            }else if let data = data {
+                do {
+                    decoded = try JSONDecoder().decode(Search.self, from: data)
+                }catch {
+                    errorMessage = error.localizedDescription
+                }
+            }
+            
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                if let decoded = decoded {
+                    self.results = decoded.results
+                }
+                if let errorMessage = errorMessage {
+                    self.showError(errorMessage)
+                }
                 self.dataTask = nil
                 self.button.isEnabled = true
             }
         }
         button.isEnabled = false
         dataTask?.resume()
+    }
+    
+    private func showError(_ message: String) {
+        let title = "Error"
+        print("\(title): \(message)")
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        alert.preferredAction = okAction
+        present(alert, animated: true)
     }
     
 }
