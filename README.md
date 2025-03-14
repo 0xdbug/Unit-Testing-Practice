@@ -58,6 +58,12 @@ otherwise regular injection is fine ig
 Some UIKit actions are not immediate, they add an event to the run loop.
 execute the run loop to fire events
 
+### Test Asynchronous Code
+> Be aware that test code executes on the main thread. And when any code schedules a closure for asynchronous execution, life gets tricky. We need to find a way to resynchronize it back to the main thread. A Test Expectation can usually help us.
+
+If there is no completion closure, the we should check based on a time interval?
+Nimble has a better way to approach this with `toEventually`
+
 
 ## BDD - Quick & Nimble 
 > Verify how the application behaves regardless of implementation.
